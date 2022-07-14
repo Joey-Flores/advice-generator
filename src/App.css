@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+* {
+  font-family: "Manrope", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  background-color: hsl(218, 23%, 16%);
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.1rem;
+  background-color: hsl(217, 19%, 38%, 40%);
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.card p {
+  color: #fff;
+  font-size: 28px;
+}
+
+.card h5 {
+  color: hsl(150, 100%, 66%);
+  margin-bottom: 0;
+  letter-spacing: 3px;
+}
+
+.card .divider {
+  padding-bottom: 55px;
+}
+
+.circle {
+  height: 70px;
+  width: 70px;
+  background-color: hsl(150, 100%, 66%);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10%;
 }
 
-.App-link {
-  color: #61dafb;
+.circle img {
+  height: 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.circle:active {
+  transform: translateY(4px);
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    width: 500px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card .divider {
+    content: url("./images/pattern-divider-desktop.svg");
+  }
+
+  .circle:hover {
+    cursor: pointer;
+    background-color: rgb(45 255 196 / 90%);
+    box-shadow: 0px 0px 37px 2px rgb(45 255 196 / 90%);
   }
 }
